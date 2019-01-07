@@ -14,7 +14,9 @@ class Home extends CI_Controller {
 		$resultados = $this->Profesionista->getProfesionistaByServiceOrCategory($keyWords);
 		$data = array();
 		$data['resultados'] = $resultados;
+
+		$this->load->view('layout/header');
 		$this->load->view('results', $data);
+		$this->load->view('layout/footer');
 	}
-	
 }

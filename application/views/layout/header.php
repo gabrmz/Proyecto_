@@ -38,6 +38,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="">Soy cliente</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="http://localhost/Proyecto/Home/resultados">Catálogo de profesionistas</a>
+              </li>
             </ul>
 
             <ul class="navbar-nav ml-auto">

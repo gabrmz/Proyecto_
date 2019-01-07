@@ -4,9 +4,8 @@
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-8 text-center col-sm-12 element-animate">
-              <h1>Nombre: <?php echo $profesionista['nombre']?> Apellido paterno: <?php echo $profesionista['a_paterno']?> Apellido materno: <?php echo $profesionista['a_materno']?> </h1>
-              <p>Profesión: <?php echo $profesionista['profesion']?>  </br>Ciudad: <?php echo $profesionista['municipio']?>  Estado: <?php echo $profesionista['estado']?></p>
-
+              <h1><?php echo $profesionista['nombre']?> <?php echo $profesionista['a_paterno']?> <?php echo $profesionista['a_materno']?> </h1>
+              <p><?php echo $profesionista['profesion']?>  </br><?php echo $profesionista['municipio']?>, <?php echo $profesionista['estado']?></p>
             </div>
           </div>
         </div>
@@ -22,7 +21,8 @@
               <h2>Detalles del profesionista</h2>
               <span class="back-text"></span>
 
-              <table>
+              <ta
+              ble>
                 <tr>
                   <th>Opiniones: <?php echo count($valoraciones)?></th>
                 </tr> 
@@ -80,21 +80,20 @@
             <div class="col-md-8 mx-auto contact-form-contact-info">
                 <p class="d-flex">
                   <span class="ion-ios-location icon mr-5"></span>
-                  <span>Servicio: <?php echo $profesionista['servicios']?></span>
+                  <span><?php echo $profesionista['servicios']?></span>
                 </p>
 
                 <p class="d-flex">
                   <span class="ion-ios-telephone icon mr-5"></span>
-                  <span>Número de teléfono: <?php echo $profesionista['tel']?></span>
-                  <span>Número de celular: <?php echo $profesionista['cel']?></span>
+                  <span><?php echo $profesionista['tel']?></span></br></span>
+                  <span><?php echo $profesionista['cel']?></span>
                 </p>
 
                 <p class="d-flex">
                   <span class="ion-android-mail icon mr-5"></span>
-                  <span>Web: <?php echo $profesionista['web']?></span>
+                  <span><?php echo $profesionista['web']?></span>
                 </p>
               </div>
-
           </div>
         </div>
       </div>
