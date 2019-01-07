@@ -6,10 +6,10 @@
             <div class="col-md-8 text-center col-sm-12 element-animate">
               <h1>¿Que estas buscando?</h1>
               
-                <form action="#">
-               
+              <?php echo form_open('home/resultados', array()) ?>
+                
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Buscar por nombre, categoría o palabra clave (de  lo que este en el campo servicios)">
+                  <input type="text" name="busqueda" class="form-control" placeholder="Buscar por nombre, categoría o palabra clave (de  lo que este en el campo servicios)">
                 </div>
                 <div class="form-group">
                   <input type="submit" class="btn btn-primary btn-block py-3" value="Buscar">

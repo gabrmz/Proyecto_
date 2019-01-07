@@ -9,8 +9,9 @@ class Home extends CI_Controller {
 	}
 
 	public function resultados(){
-		$palabrasClave = array('diseños','desarrollo','videoclips');
-		$resultados = $this->Profesionista->getProfesionistaByServiceOrCategory($palabrasClave);
+		$object = $this->input->post('busqueda');
+		$keyWords = explode(' ', $object);
+		$resultados = $this->Profesionista->getProfesionistaByServiceOrCategory($keyWords);
 		$data = array();
 		$data['resultados'] = $resultados;
 		$this->load->view('results', $data);
