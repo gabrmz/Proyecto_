@@ -17,4 +17,16 @@ class Profesionista extends CI_Model{
 			return null;
 		}				
 	}
+
+	public function getProfesionistaByServiceOrCategory($words){
+		$this->db->select('*');
+		$this->db->from('profesionistas');
+		foreach ($words as $word){
+			$this->db->or_like('servicios', $word);
+		}
+
+		$resultado = $this->db->get();
+		$info = $resultado->result_array();
+		return $info;
+	}
 }
