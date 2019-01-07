@@ -68,11 +68,11 @@ class Profesionistas extends CI_Controller {
 	}
 
 	public function perfil($idProfesionista){
-		$profesinista = $this->Profesionista->getProfesionista($idProfesionista);
+		$profesionista = $this->Profesionista->getProfesionista($idProfesionista);
 		$valoraciones = $this->Valoracion->getValoracionByProfesionista($idProfesionista);
 
 		$data = array();
-		if (!is_null($profesinista)){
+		if (!is_null($profesionista)){
 			$data['profesionista'] = $profesionista;
 			$data['valoraciones'] = $valoraciones;
 		}else{

@@ -2,6 +2,11 @@
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		function popup(){
+			alert('Hola');
+		}
+	</script>
 	<title></title>
 </head>
 <body>
@@ -16,8 +21,8 @@
     		echo "<tr> 
 					<td>".$item['nombre']." ".$item['a_paterno']." ".$item['a_materno']."<br/>
 					".$item['profesion']." en ".$item['municipio'].", ".$item['estado']."<br/>
-					".$item['puntuacion']." de 5<br/>
-					<button onclick='".base_url()."profesionistas/perfil/15'>Ver perfil</button>
+					Calificación: ".$item['puntuacion']." de 5<br/>
+					".anchor('profesionistas/perfil/'.$item['id_profesionista'], 'Ver perfil'.'')."
 					</td>					
 				  </tr>";
 		}
