@@ -8,6 +8,8 @@ class Profesionistas extends CI_Controller {
 		$this->load->helper(array('getmenu'));
 		$this->load->model('mProfesionistas');
 		$this->load->model('mProfesionistasDos');
+		$this->load->model('Profesionista');
+		$this->load->model('Valoracion');
 	}
 
 	public function index(){
@@ -63,5 +65,21 @@ class Profesionistas extends CI_Controller {
 
 		//$this->load->view('profesionistas');
 		redirect('profesionistas/index');
+	}
+
+	public function perfil($idProfesionista){
+		$profesinista = $this->Profesionista->getProfesionista($idProfesionista);
+		$valoraciones = $this->Valoracion->getValoracionByProfesionista($idProfesionista);
+
+		$data = array();
+		if (!is_null($profesinista)){
+			$data['profesionista'] = $profesionista;
+			$data['valoraciones'] = $valoraciones;
+		}else{
+			$data['profesionista'] = null;
+			$data['valoraciones'] = null;
+		}
+
+		$this->load->view('datos', $data);
 	}
 }
