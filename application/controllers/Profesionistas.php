@@ -79,7 +79,8 @@ class Profesionistas extends CI_Controller {
 			$data['profesionista'] = null;
 			$data['valoraciones'] = null;
 		}
-
+		$this->load->view('layout/header');
 		$this->load->view('datos', $data);
+		$this->load->view('layout/footer');
 	}
 }

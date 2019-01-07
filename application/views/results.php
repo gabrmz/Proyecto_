@@ -10,7 +10,7 @@
 	<title></title>
 </head>
 <body>
-<h1>Resultados:</h1>
+<h1>Profesionistas registrados</h1>
 
 <table>
 	<tr>
