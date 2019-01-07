@@ -23,8 +23,14 @@ class Profesionista extends CI_Model{
 		$this->db->from('profesionistas');
 		foreach ($words as $word){
 			$this->db->or_like('servicios', $word);
+			$this->db->or_like('profesion', $word);
+			$this->db->or_like('profesion', $word);
 		}
-
+		
+		foreach ($words as $word){
+			
+		}
+		$this->db->distinct();
 		$resultado = $this->db->get();
 		$info = $resultado->result_array();
 		return $info;
