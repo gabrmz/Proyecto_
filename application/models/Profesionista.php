@@ -19,8 +19,9 @@ class Profesionista extends CI_Model{
 	}
 
 	public function getProfesionistaByServiceOrCategory($words){
-		$this->db->select('*');
+		$this->db->select('profesionistas.id_profesionista, profesionistas.nombre, profesionistas.a_paterno, profesionistas.a_materno, profesionistas.profesion, profesionistas.municipio, profesionistas.estado, valoracion.puntuacion');
 		$this->db->from('profesionistas');
+		$this->db->join('valoracion', 'profesionistas.id_profesionista = valoracion.id_valoracion', 'left outer'); 
 		foreach ($words as $word){
 			$this->db->or_like('servicios', $word);
 			$this->db->or_like('profesion', $word);
