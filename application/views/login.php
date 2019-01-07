@@ -1,74 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Log in</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/iCheck/square/blue.css">
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Checkin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html"><b>Inicia sesión</b></a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">Introduce tus datos para iniciar sesión</p>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
 
-    <form action="<?php echo base_url();?>Login/ingresar" method="POST">
-      <div class="form-group has-feedback">
-        <input type="text" name="txtUsuario" class="form-control" placeholder="Tu correo">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" name="txtContra" class="form-control" placeholder="Tu contraseña">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+  </head>
+  <body>
+    
+    <header role="banner">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="http://localhost/Proyecto/">Check<span>in</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/img/slider-1.jpg');">
+        
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-5 text-center col-sm-12 element-animate">
+           
+            <div class="form-wrap overlap element-animate">
+              <h2 class="h2">Identificate</h2>
+              <h2> <?php echo $mensaje;?> </h2>
+              <form action="<?php echo base_url();?>Login/ingresar" method="POST">
+                
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Tu correo" name="txtUsuario">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Tu contraseña" name="txtContra">
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary btn-block py-3" value="Entrar">
+                </div>
+
+              </form>
+            </div>
+
+            </div>
           </div>
         </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
-        </div>
-        <!-- /.col -->
       </div>
-    </form>
-</br>
-    <?php echo $mensaje;?>
-  </div>
-  <!-- /.login-box-body -->
-</div>
-<!-- /.login-box -->
-
-<!-- jQuery 2.2.0 -->
-<script src="<?php echo base_url();?>assets/plugins/jQuery/jQuery-2.2.0.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="<?php echo base_url();?>assets/plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
-  });
-</script>
-</body>
-</html>
+    </section>

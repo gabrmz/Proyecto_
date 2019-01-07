@@ -11,6 +11,7 @@ class Login extends CI_Controller {
 	public function index(){
 		$data['mensaje'] = '';
 		$this->load->view('login',$data);
+		$this->load->view('layout/footer');
 	}
 
 	public function ingresar(){
@@ -21,7 +22,6 @@ class Login extends CI_Controller {
 
 		if ($resultado == 1){
 			$this->load->view('layout/header');
-			$this->load->view('layout/menu');
 			$this->load->view('perfilp');
 			$this->load->view('layout/footer');
 		}else{

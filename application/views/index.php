@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>403 Forbidden</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	</head>
-	<body>
-		<h1>Bienvenidos a check in</h1>
-	</body>
-</html>
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/img/slider-1.jpg');">
+        
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 element-animate">
+              <h1>¿Que estas buscando?</h1>
+              
+                <form action="#">
+               
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Buscar por nombre, categoría o palabra clave (de  lo que este en el campo servicios)">
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-primary btn-block py-3" value="Buscar">
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
