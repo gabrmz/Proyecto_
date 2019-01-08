@@ -1,4 +1,10 @@
-	<h1>Registro</h1>
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url('<?php echo base_url();?>assets/img/slider-1.jpg');">
+        
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 element-animate">
+             	<h1>Registro</h1>
 	
 	<form action="<?php echo base_url(); ?>Profesionistas/registrar" method="POST">
 		<table>
@@ -41,3 +47,11 @@
 			</tr>
 		</table>
 	</form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+

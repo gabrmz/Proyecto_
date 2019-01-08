@@ -9,7 +9,7 @@
               <?php echo form_open('home/resultados', array()) ?>
                 
                 <div class="form-group">
-                  <input type="text" name="busqueda" class="form-control" placeholder="Buscar por nombre, categoría o palabra clave (de  lo que este en el campo servicios)">
+                  <input type="text" name="busqueda" class="form-control" placeholder="Busca escribiendo una palabra clave ">
                 </div>
                 <div class="form-group">
                   <input type="submit" class="btn btn-primary btn-block py-3" value="Buscar">

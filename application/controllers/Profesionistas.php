@@ -14,7 +14,9 @@ class Profesionistas extends CI_Controller {
 
 	public function index(){
 		$data['menu'] = main_menu();
+		$this->load->view('layout/header');
 		$this->load->view('profesionistas',$data);
+		$this->load->view('layout/footer');
 	}
 
 	public function registrar(){
