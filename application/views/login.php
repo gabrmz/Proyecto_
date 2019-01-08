@@ -43,9 +43,14 @@
             <div class="form-wrap overlap element-animate">
               <h2 class="h2">Identificate</h2>
               <h2> <?php echo $mensaje;?> </h2>
-              <form action="<?php echo base_url();?>Login/ingresar" method="POST">
-                
-                <div class="form-group">
+              <?php 
+                  if ($tipo == "profesionista"){
+                    echo '<form action="'.base_url().'Login/ingresarProfesionista" method="POST">';
+                  }else{                    
+                    echo '<form action="'.base_url().'Login/ingresarCliente" method="POST">';
+                  }
+              ?>
+               <div class="form-group">
                   <input type="text" class="form-control" placeholder="Tu correo" name="txtUsuario">
                 </div>
                 <div class="form-group">

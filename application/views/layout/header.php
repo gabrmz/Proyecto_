@@ -45,7 +45,13 @@
 
             <ul class="navbar-nav ml-auto">
               <li class="nav-item cta-btn">
-                <a class="nav-link" href="http://localhost/Proyecto/login">Iniciar sesión como profesionista</a>
+                <a class="nav-link" href="<?php echo base_url()?>login/profesionista">Iniciar sesión como profesionista</a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item cta-btn">
+                <a class="nav-link" href="<?php echo base_url()?>login/cliente">Iniciar sesión como cliente</a>
               </li>
             </ul>
             

@@ -45,7 +45,7 @@
                 ?>  
               </table>
                <?php 
-                if(!$this->session->userdata('isLoggedIn')){
+                if(!$this->session->userdata('s_id_cliente')){
                     echo "¿Deseas dejar un comentario? Por favor  ".anchor('/login', 'Inicia sesión');
                 }else{
                   

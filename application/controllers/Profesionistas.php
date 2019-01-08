@@ -72,7 +72,7 @@ class Profesionistas extends CI_Controller {
 	public function perfil($idProfesionista){
 		$profesionista = $this->Profesionista->getProfesionista($idProfesionista);
 		$valoraciones = $this->Valoracion->getValoracionByProfesionista($idProfesionista);
-
+		print_r($this->session->userdata('s_id_cliente'));
 		$data = array();
 		if (!is_null($profesionista)){
 			$data['profesionista'] = $profesionista;
@@ -84,5 +84,20 @@ class Profesionistas extends CI_Controller {
 		$this->load->view('layout/header');
 		$this->load->view('datos', $data);
 		$this->load->view('layout/footer');
+	}
+
+	public function addComment(){
+		$comment = $this->input->post('comment');
+		$calificacion = $this->input->post('calificacion');
+		$idProfesionista = $this->input->post('idProfesionista');
+		$idCliente = $this->input->post('idCliente');
+
+		$idDataInserted = $this->Valoracion->addCommentValoracion($comment, $calificacion, $idProfesionista, $idCliente);
+
+		if (!is_null($idDataInserted)){
+			$this->perfil($idProfesionista);
+		}else{
+			$this->perfil($idProfesionista);
+		}
 	}
 }

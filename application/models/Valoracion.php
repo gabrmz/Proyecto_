@@ -17,4 +17,10 @@ class Valoracion extends CI_Model{
 			return array();
 		}				
 	}
+
+	public function addCommentValoracion($comment, $calificacion, $idProfesionista, $idCliente){
+		$params = array('id_c' => $idCliente, 'id_p' => $idProfesionista, 'opinion' => $comment, 'puntuacion' => $calificacion);
+		$this->db->insert('valoracion', $params);
+		return $idOfInsertedData = $this->db->insert_id();
+	}
 }
